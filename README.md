@@ -48,3 +48,12 @@ To Train, we use wandb sweeps. We need to initiate them.
 1. After you are done training the models, once you pick your best run, you can download the corresponding model and save in `tokenizer` or `tokenizer_without_pre` folder depending on if it was CodeT5 or Baseline model respectively. 
 2. Once you have the models with you, you can run the notebook in `notebooks/03_interact_gradio.ipynb`. Ensure that the paths for source tokenizer, target tokenizer and model are correctly defined. 
 3. Upon running the notebook in Step 2, you should get a link (both public and local) which could be opened in a browser where you can interact with the model. 
+
+
+# Best wandb runs:
+- **CodeT5**:
+  - Sweep: https://wandb.ai/bibihajira/uncategorized/sweeps/jvgskjg8/overview?workspace=user-bibihajira
+  - Best Run: https://wandb.ai/bibihajira/uncategorized/runs/gyhllx19/overview?workspace=user-bibihajira
+- **Baseline**: 
+  - Sweep: https://wandb.ai/bibihajira/uncategorized/sweeps/233jayav/overview?workspace=user-bibihajira
+  - Best Run: https://wandb.ai/bibihajira/uncategorized/runs/v8l9r9e9?workspace=user-bibihajira
