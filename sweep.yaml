@@ -1,0 +1,35 @@
+program: train.py
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - ${args}
+method: bayes
+metric:
+  name: eval/bleu
+  goal: maximize
+parameters:
+  dataset_name:
+    distribution: constant
+    value: "spider"
+  output_dir:
+    distribution: constant
+    value: "tokenizer"
+  source_lang:
+    distribution: constant
+    value: "english"
+  target_lang:
+    distribution: constant
+    value: "sql"
+  batch_size: 
+    min: 32
+    max: 64
+  learning_rate:
+    min: 0.00001
+    max: 0.0003
+  num_train_epochs:
+    min: 3
+    max: 30
+  max_seq_length:
+    min: 2
+    max: 100

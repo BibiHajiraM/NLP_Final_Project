@@ -1,0 +1,48 @@
+program: train_without_pre.py
+command:
+  - ${env}
+  - python3
+  - ${program}
+  - ${args}
+method: bayes
+metric:
+  name: eval/bleu
+  goal: maximize
+parameters:
+  dataset_name:
+    distribution: constant
+    value: "spider"
+  output_dir:
+    distribution: constant
+    value: "tokenizer_without_pre"
+  source_lang:
+    distribution: constant
+    value: "english"
+  target_lang:
+    distribution: constant
+    value: "sql"
+  batch_size:
+    min: 32
+    max: 64
+  learning_rate:
+    min: 0.00001
+    max: 0.0003
+  num_train_epochs:
+    min: 1
+    max: 10
+  max_seq_length:
+    min: 2
+    max: 100
+  num_layers:
+    min: 11
+    max: 12
+  hidden_size:
+    distribution: constant
+    value: 768
+  num_heads:
+    distribution: constant
+    value: 12
+  fcn_hidden:
+    distribution: constant
+    value: 3072
+
