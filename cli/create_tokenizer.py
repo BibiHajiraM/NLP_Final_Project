@@ -135,7 +135,6 @@ def main():
     #
     # Above every code line leave a short comment explaining what it does.
     # YOUR CODE STARTS HERE (our implementation is 8 lines of code)
-    # target_tokenizer = RobertaTokenizer.from_pretrained('Salesforce/codet5-small') # Loading pre-trained tokenizer
     target_tokenizer = RobertaTokenizer.from_pretrained('Salesforce/codet5-base')  # Loading pre-trained tokenizer
     logger.info(f"Saving target to {args.save_dir}/sql_tokenizer")
     target_tokenizer.save_pretrained(os.path.join(args.save_dir, f"sql_tokenizer"))

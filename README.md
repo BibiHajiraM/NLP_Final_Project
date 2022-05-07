@@ -1,5 +1,4 @@
 # How to use? 
-
 This repository is clearly an offshoot of Homework 5 codes. Hence we are not disturbing the older readme file which contains detailed instructions. Here we, merely want to highlight the steps a user may want to take to run our scripts. 
 
 # What do our scripts do?

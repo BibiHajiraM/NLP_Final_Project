@@ -471,9 +471,7 @@ def main():
     # Provide all of the TransformerLM initialization arguments from args.
     # Move model to the device we use for training
     # YOUR CODE STARTS HERE
-    # model = TransfomerEncoderDecoderModel(num_layers=args.num_layers, hidden=args.hidden_size, num_heads=args.num_heads, fcn_hidden=args.fcn_hidden, src_vocab_size=source_tokenizer.vocab_size, tgt_vocab_size=target_tokenizer.vocab_size, max_seq_len=args.max_seq_length, dropout=args.dropout_rate)
     # Use pretrained model
-    # model = T5ForConditionalGeneration.from_pretrained('Salesforce/codet5-small')
     model = T5ForConditionalGeneration.from_pretrained('Salesforce/codet5-base')
     model = model.to(args.device)
     # YOUR CODE ENDS HERE

@@ -129,7 +129,6 @@ def main():
     #
     # Above every code line leave a short comment explaining what it does.
     # YOUR CODE STARTS HERE (our implementation is 8 lines of code)
-    # target_tokenizer = RobertaTokenizer.from_pretrained('Salesforce/codet5-small') # Loading pre-trained tokenizer
     target_tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
     target_tokenizer_trainer = BpeTrainer(special_tokens=["[UNK]", "[PAD]", "[BOS]", "[EOS]"],
                                           vocab_size=args.vocab_size)
